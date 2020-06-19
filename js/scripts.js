@@ -6,8 +6,6 @@ function Order() {
   this.pizzaIdNumber = 0;
 }
 
-
-
 //business logic to make a pizza for the order
 function Pizza(size, crust, sauce, cheese, toppings) {
   this.size = size;
@@ -15,6 +13,11 @@ function Pizza(size, crust, sauce, cheese, toppings) {
   this.sauce = sauce;
   this.cheese = cheese;
   this.toppings = []; //should this be an array, or a nested object?
+}
+
+//business logic to add pizza to order
+Order.prototype.addPizzaToOrder = function(pizza) {
+  this.pizzas.push(pizza);
 }
 
 
@@ -30,5 +33,6 @@ $(document).ready(function(){
   // $(pizzaform).submit(function(event) {
   //   event.preventDefault();
     let myPizza = new Pizza("small", "thin", "marinara", "mozzarella");
+    customerOrder.addPizzaToOrder(myPizza);
   // });
 });
