@@ -50,12 +50,12 @@ Have you ever found yourself on a Zoom call, and all of your friends and family 
 
 ## Known Bugs
 
-| Location (html/css/js & specific location if known) | Bug | Resolved (Y/N) |  How was the issue resolved?  |
+| Location (html/css/js & specific location if known) |  Message  | Bug | Resolved (Y/N) |  How was the issue resolved?  |
 | -------- | ----- | ------ | ------ |
-|   |   |   |    |
-|   |   |   |    |
-|   |   |   |    |
-|   |   |   |    |
+| scripts.js | Cannot read property 'push' of undefined | cannot pass veggieArray to .addVeggies function? |    |    |
+|   |   |   |    |    |
+|   |   |   |    |    |
+|   |   |   |    |    |
 
 ## Support and contact details
 
