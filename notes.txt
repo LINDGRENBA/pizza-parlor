@@ -1,3 +1,8 @@
+Notes for things to consider along the way:
+In README.md setup, can I replace "n/a" with any helpful images?
+
+
+
 Create a website for a pizza company where a user can choose one or more individual toppings (cheese, pepperoni, artichoke, anchovy, etc) and a size to order a pizza and see the final cost.
 
 -- Allow the user to choose toppings and size for the pizza they'd like to order.
