@@ -1,11 +1,10 @@
 Notes for things to consider along the way:
 In README.md setup, can I replace "n/a" with any helpful images?
+Should each topping have an id so user can select which toppings to delete?
 
 
 
 Create a website for a pizza company where a user can choose one or more individual toppings (cheese, pepperoni, artichoke, anchovy, etc) and a size to order a pizza and see the final cost.
-
--- Create a pizza object constructor with properties for toppings and size.
 
 -- Create a prototype method for the cost of a pizza depending on the selections chosen. Use your own formula for this.
 

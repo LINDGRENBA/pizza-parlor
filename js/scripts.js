@@ -24,9 +24,9 @@ function Pizza(size, crust, sauce, cheese) {
   this.crust = crust;
   this.sauce = sauce;
   this.cheese = cheese;
-  this.meatToppings;
+  this.proteinToppings;
   this.veggieToppings;
-  // this.price;
+  this.price = 20;
 }
 
 Pizza.prototype.addVeggieToppings = function(veggies) {
@@ -39,11 +39,21 @@ Pizza.prototype.addProteinToppings = function(protein) {
   return this.proteinToppings;
 }
 
+Pizza.prototype.calculateTotalCost = function() {
+  let costForAddedVeggies = 0;
+  let costForAddedProtein = 0;
+  for(let i = 0; i < this.veggieToppings.length; i++) {
+    costForAddedVeggies += 1;
+  }
+  for(let i = 0; i < this.proteinToppings.length; i++) {
+    costForAddedProtein += 3;
+  }
+  return this.price += costForAddedProtein + costForAddedVeggies;
+}
+
 //USER INTERFACE LOGIC
-let customerOrder = new Order();
-
 $(document).ready(function(){
-
+  let customerOrder = new Order();
   $("#order-form").submit(function(event) {
     event.preventDefault();
     // take in user selection to create basic pizza
@@ -69,6 +79,11 @@ $(document).ready(function(){
         proteinArray.push($(this).val());
       });
       let addedProtein = myPizza.addProteinToppings(proteinArray);
+    });
+
+    $("#calculate-order-total").click(function() {
+      let priceOfPizza = myPizza.calculateTotalCost();
+      $("#price").text(priceOfPizza);
     });
 
   });

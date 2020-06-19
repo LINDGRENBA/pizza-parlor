@@ -36,6 +36,8 @@ body {
 
 }
 
-
-
-/*  ORDER FORM  */
+/*  ORDER CONFIRMATION  */
+#order-summary {
+  padding: 30px;
+  text-align: center;
+}
