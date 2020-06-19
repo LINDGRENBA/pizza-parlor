@@ -36,10 +36,18 @@ Order.prototype.assignPizzaId = function() {
 //USER INTERFACE LOGIC
 $(document).ready(function(){
   let customerOrder = new Order();
-  // $(pizzaform).submit(function(event) {
-  //   event.preventDefault();
-    let myPizza = new Pizza("small", "thin", "marinara", "mozzarella");
+  $("#order-form").submit(function(event) {
+    event.preventDefault();
+    
+    // take in user selection to create basic pizza
+    let pizzaSize = $("#size").val();
+    let pizzaCrust = $("#crust").val();
+    let pizzaSauce = $("#sauce").val();
+    let pizzaCheese = $("#cheese").val();
+    
+    //create new Pizza object with customer selected values and add to order
+    let myPizza = new Pizza(pizzaSize, pizzaCrust, pizzaSauce, pizzaCheese);
     customerOrder.addPizzaToOrder(myPizza);
-    console.log(customerOrder.pizzas);
-  // });
+    console.log(customerOrder);
+  });
 });
