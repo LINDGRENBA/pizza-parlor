@@ -17,9 +17,15 @@ function Pizza(size, crust, sauce, cheese, toppings) {
 
 //business logic to add pizza to order
 Order.prototype.addPizzaToOrder = function(pizza) {
+  pizza.pizzaId = this.assignPizzaId();
   this.pizzas.push(pizza);
 }
 
+//business logic to increade pizza id number by 1 and then return the new value when called
+Order.prototype.assignPizzaId = function() {
+  this.pizzaIdNumber += 1;
+  return this.pizzaIdNumber;
+}
 
 
 
