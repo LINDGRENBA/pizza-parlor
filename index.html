@@ -10,6 +10,41 @@
   <title>Pizza Parlor</title>
 </head>
 <body>
-  
+  <div class="container">
+    <header class="page-header">
+      <h1>Place Your Order</h1>
+      <p class="tagline">It's always a good time for pizza!</p>
+    </header>
+    <form action="#" id="order-form">
+      <h3>Please select your bases.</h3>
+      <div id="pizza-base">
+        <div class="form-group">
+          <select class="form-control base" id="size">
+            <option value="small">Small</option>
+            <option value="large">Large</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <select class="form-control base" id="crust">
+            <option value="thin">Thin</option>
+            <option value="thick">Thick</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <select class="form-control base" id="sauce">
+            <option value="marinara">Marinara</option>
+            <option value="garlic-alfredo">Garlic Alfredo</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <select class="form-control base" id="cheese">
+            <option value="mozzarella">Mozzarella</option>
+            <option value="vegan">Vegan</option>
+          </select>
+        </div>
+      </div>
+      <button class="btn" type="submit">Place Order</button>
+    </form>
+  </div>
 </body>
 </html>
