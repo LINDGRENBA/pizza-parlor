@@ -12,7 +12,7 @@ Have you ever found yourself on a Zoom call, and all of your friends and family 
 
 | Steps | Example |
 | -------- | ----- |
-|  1. Follow this [link to the project repository](LINK HERE) on GitHub.   |  n/a  |    
+|  1. Follow this [link to the project repository](https://github.com/LINDGRENBA/pizza-parlor.git) on GitHub.   |  n/a  |    
 |  2. Click on the "Clone or download" button to copy the project link.   |   ![Image of GitHub Clone or download button](img/readme/clone-download-button.PNG)   |   
 |  3. If you are comfortable with the command line, you can copy the project link and clone it through your commad line with the command `git clone`. Otherwise, I recommend choosing "**Download ZIP**".   |   ![Download ZIP option on GitHub](img/readme/download-zip.PNG)  |   
 |   4. Once the ZIP file has finished downloading, you can right click on the file to view the zip folder in your downloads.   |   ![ZIP folder in downloads](img/readme/zip-folder.PNG)  |   
@@ -29,7 +29,7 @@ Have you ever found yourself on a Zoom call, and all of your friends and family 
 ## Specifications
 
 | Behavior | Input | Output |  Completed(Y/N?)  |
-| -------- | ----- | ------ |
+| -------- | ----- | ------ | -------- |
 |  Program will create new Order object with array to hold each pizza customer orders and unique id for each pizza  |  n/a  |  Order {pizzas = [], pizzaId: 0}  |  Y  |
 |  Program will add pizza object to pizzas array in order object  |  Order.push(Pizza)  |  Order {pizzas = [myPizza], id = 0}  |  Y  |
 |  Program will give each added pizza a unique id  |  pizza1, pizza2  |  pizza1 id = 1, pizza2 id = 2  |  Y  |
@@ -38,24 +38,18 @@ Have you ever found yourself on a Zoom call, and all of your friends and family 
 }  |  Y  |
 |  Program will take in a selection of toppings from user  |  shrimp, olives  |  shrimp, olives  |  Y  |
 |  Program will add toppings to new pizza object  |  shrimp, olives, sausage  |   pizza{size: large, crust: thick, sauce: marinara, cheese: mozzarella, toppings = ["shrimp", "olives", "sausage"]}   |  Y  |
-|  Program will give cost of pizza  |  user clicks confirm order  |  $20  |
-|  Program will increase pizza cost by $3 if size is large |  size:large  |  $20 + $3  |
-|  Program will increase pizza cost by $1 for each topping added |  size: large, toppings.length = 5  |  $23 + $5  |
-|  Program will delete topping  |  user selects sausage topping and chooses delete icon  |  toppings: shrimp  |
-|  Program will allow user to update or change pizza details before placing order  |  user selects large, thin crust and vegan cheese  |  pizza{size: large, crust: thin, sauce: marinara, cheese: vegan, toppings = [ ]}  |
-
-<!-- |     |     |     |
-|     |     |     |
-|     |     |     | -->
+|  Program will give cost of pizza  |  user clicks confirm order  |  $20  |  Y  |
+|  Program will increase pizza cost by $3 if size is large |  size:large  |  $20 + $3  |  Y  |
+|  Program will increase pizza cost by $1 for each topping added |  size: large, toppings.length = 5  |  $23 + $5  |  Y  |
+|  Program will delete topping  |  user selects sausage topping and chooses delete icon  |  toppings: shrimp  |  N  |
+|  Program will allow user to update or change pizza details before placing order  |  user selects large, thin crust and vegan cheese  |  pizza{size: large, crust: thin, sauce: marinara, cheese: vegan, toppings = [ ]}  |  N  |
 
 ## Known Bugs
 
 | Location (html/css/js & specific location if known) |  Message  | Bug | Resolved (Y/N) |  How was the issue resolved?  |
-| -------- | ----- | ------ | ------ |
+| -------- | ----- | ------ | ------ | ------ |
 | scripts.js | Cannot read property 'push' of undefined | cannot pass veggieArray to .addVeggies function? |  Y  |  Created separate .click functions as siblings of .submit function in user interface, updated syntax of addVeggies and addProtein .click functions in user interface  |
-|  scripts.js | Uncaught reference error myPizza is not defined | function to add veggie toppings to pizza unable to access myPizza |  Y  |  Moved .click functions for addVeggies and addProtein to inside of order form .submit function  |
-|   |   |   |    |    |
-|   |   |   |    |    |
+|  scripts.js | Uncaught reference error myPizza is not defined | function to add veggie toppings to pizza unable to access myPizza |  Y  |  Moved .click functions for addVeggies and addProtein to inside of order form .submit function  |  
 
 ## Support and contact details
 

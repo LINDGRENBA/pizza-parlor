@@ -64,6 +64,7 @@ $(document).ready(function(){
     //create new Pizza object with customer selected values and add to order
     let myPizza = new Pizza(pizzaSize, pizzaCrust, pizzaSauce, pizzaCheese);
     customerOrder.addPizzaToOrder(myPizza);
+    $("#addToppingsSection").show();
 
     $("button#addVeggies").click(function() {
       let veggieArray = [];
@@ -84,6 +85,7 @@ $(document).ready(function(){
     $("#calculate-order-total").click(function() {
       let priceOfPizza = myPizza.calculateTotalCost();
       $("#price").text(priceOfPizza);
+      $("#order-summary").show();
     });
 
   });

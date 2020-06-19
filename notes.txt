@@ -2,24 +2,6 @@ Notes for things to consider along the way:
 In README.md setup, can I replace "n/a" with any helpful images?
 Should each topping have an id so user can select which toppings to delete?
 
-
-
-Create a website for a pizza company where a user can choose one or more individual toppings (cheese, pepperoni, artichoke, anchovy, etc) and a size to order a pizza and see the final cost.
-
--- Create a prototype method for the cost of a pizza depending on the selections chosen. Use your own formula for this.
-
-The most important part of this code review is using and demonstrating your understanding of constructors and prototypes.
-
-
-Constructors and prototypes are used successfully.
-
-Application works as expected.
-
-
-Required functionality is in place by the 5:00pm Friday deadline.
-
-Project is in a polished, portfolio-quality state.
-
 Reach Goals:
 Style your site with CSS and images.
 

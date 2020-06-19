@@ -43,8 +43,10 @@
           </select>
         </div>
       </div>
-      <button class="btn btn-success" type="submit">Begin Order</button>
+      <button id="begin-order-button" class="btn btn-success" type="submit">Begin Order</button>
     </form>
+
+    <hr>
 
     <div id="addToppingsSection">
       <!--VEGGIE DIV-->
@@ -76,13 +78,15 @@
     </div>
   </div>
 
+  <hr>
+
   <button id="calculate-order-total" class="btn btn-info">Calculate Your Total</button>
 
   <div id="order-summary">
     <h2>Here is a summary of your order:</h2>
     <p>Payment will be collected at time of pick up or delivery</p>
     <ul id="pizza-details">
-
+      
     </ul>
     <h2>Your Total: $<span id="price"></span></h2>
   </div>

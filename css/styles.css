@@ -8,36 +8,44 @@ body {
   font-style: italic;
 }
 
-
 /*  ORDER FORM  */
 .base {
   display: inline-block;
   width: 100px;
 }
 
-#pizza-base, #toppings {
+#pizza-base, #addToppingsSection {
   display: flex;
   flex-flow: row wrap;
   align-items: center;
   min-height: 100px;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 #pizza-base {
   justify-content: space-between;
 }
 
-#toppings {
+#addToppingsSection {
   justify-content: space-around;
 }
 
-.btn {
+/* BUTTONS */
+#begin-order-button {
   display: block;
   margin: 30px auto;
+}
 
+#calculate-order-total {
+  margin: 50px auto;
+  display: block;
+  
 }
 
 /*  ORDER CONFIRMATION  */
 #order-summary {
+  display: none;
   padding: 30px;
   text-align: center;
 }
