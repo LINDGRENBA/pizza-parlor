@@ -40,5 +40,6 @@ $(document).ready(function(){
   //   event.preventDefault();
     let myPizza = new Pizza("small", "thin", "marinara", "mozzarella");
     customerOrder.addPizzaToOrder(myPizza);
+    console.log(customerOrder.pizzas);
   // });
 });
