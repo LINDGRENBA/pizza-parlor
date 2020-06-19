@@ -52,7 +52,7 @@ Have you ever found yourself on a Zoom call, and all of your friends and family 
 
 | Location (html/css/js & specific location if known) |  Message  | Bug | Resolved (Y/N) |  How was the issue resolved?  |
 | -------- | ----- | ------ | ------ |
-| scripts.js | Cannot read property 'push' of undefined | cannot pass veggieArray to .addVeggies function? |    |    |
+| scripts.js | Cannot read property 'push' of undefined | cannot pass veggieArray to .addVeggies function? |  Y  |  Created separate .click functions as siblings of .submit function in user interface, updated syntax of addVeggies and addProtein .click functions in user interface  |
 |   |   |   |    |    |
 |   |   |   |    |    |
 |   |   |   |    |    |
