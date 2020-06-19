@@ -33,7 +33,7 @@ Order.prototype.assignPizzaId = function() {
 //business logic to add veggies that user has selected into veggieToppings array in Pizza constructor function
 Pizza.prototype.addVeggies = function(veggies) {
   veggies.forEach(function(veggie) {
-    this.veggieToppings.push(veggie);
+    console.log(veggie);
   });
 }
 
@@ -44,31 +44,33 @@ Pizza.prototype.addVeggies = function(veggies) {
 //USER INTERFACE LOGIC
 $(document).ready(function(){
   let customerOrder = new Order();
+
   $("#order-form").submit(function(event) {
     event.preventDefault();
-    
     // take in user selection to create basic pizza
     let pizzaSize = $("#size").val();
     let pizzaCrust = $("#crust").val();
     let pizzaSauce = $("#sauce").val();
     let pizzaCheese = $("#cheese").val();
-
     //create new Pizza object with customer selected values and add to order
     let myPizza = new Pizza(pizzaSize, pizzaCrust, pizzaSauce, pizzaCheese);
     customerOrder.addPizzaToOrder(myPizza);
+  });
 
-    // take in user selection for toppings
-    $("input:checkbox[name=veggies]:checked").each(function() {
-      let veggieArray = [];
-      let userSelectedVeggies = $(this).val();
-      veggieArray.push(userSelectedVeggies);
-      myPizza.addVeggies(veggieArray);
+  // take in user selection for toppings
+  $("#addVeggiesButton").click(function() {
+    let veggieArray = [];
+    $("input:checkbox[name=veggies]:checked").each(function(i) {
+      veggieArray.push($(this).val());
       console.log(veggieArray);
     });
-    $("input:checkbox[name=protein]:checked").each(function() {
-      let selectedProtein = $(this).val();
-      console.log(selectedProtein);
-      // selectedProtein.addProtein();
+  });
+
+  $("#addProteinButton").click(function() {
+    let proteinArray = [];
+    $("input:checkbox[name=protein]:checked").each(function(i) {
+      proteinArray.push($(this).val());
+      console.log(proteinArray);
     });
   });
 });
