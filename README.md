@@ -28,9 +28,10 @@ Have you ever found yourself on a Zoom call, and all of your friends and family 
 
 ## Specifications
 
-| Behavior | Input | Output |
+| Behavior | Input | Output |  Completed(Y/N?)  |
 | -------- | ----- | ------ |
-|  Program will create new Order object with array to hold each pizza customer orders and unique id for each pizza  |  n/a  |  Order {pizzas = [], pizzaId: 0}  |
+|  Program will create new Order object with array to hold each pizza customer orders and unique id for each pizza  |  n/a  |  Order {pizzas = [], pizzaId: 0}  |  Y  |
+|  Program will add pizza object to pizzas array in order object  |  Order.push(Pizza)  |  Order {pizzas = [myPizza], id = 0}  |  
 |  Program will give each added pizza a unique id  |  pizza1, pizza2  |  pizza1 id = 1, pizza2 id = 2  |
 |  Program will create a new pizza object with size, crust, sauce and cheese properties and empty toppings array  |  n/a  |  pizza{size: small, crust: thick, sauce: marinara, cheese: mozzarella, toppings = [ ]}  |
 |  Program will change/update size, crust, sauce and cheese properties based on user selection  |  user selects large, thin crust and vegan cheese  |  pizza{size: large, crust: thin, sauce: marinara, cheese: vegan, toppings = [ ]}  |
