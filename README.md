@@ -34,8 +34,9 @@ Have you ever found yourself on a Zoom call, and all of your friends and family 
 |  Program will add pizza object to pizzas array in order object  |  Order.push(Pizza)  |  Order {pizzas = [myPizza], id = 0}  |  Y  |
 |  Program will give each added pizza a unique id  |  pizza1, pizza2  |  pizza1 id = 1, pizza2 id = 2  |  Y  |
 |  Program will create a new pizza object with size, crust, sauce and cheese properties and empty toppings array  |  n/a  |  pizza{size: small, crust: thick, sauce: marinara, cheese: mozzarella, toppings = [ ]}  |  Y  |
-|  Program will allow customer to choose pizza objects size, crust, sauce and cheese properties and submit form to create pizza object  |  small, thin, garlic-alfredo, vegan  |  myPizza = {size:small, crust:thin, sauce:garlic-alfredo, cheese:vegan}  |  Y  |
-|  Program will take in a selection of toppings from user  |  shrimp, olives  |  shrimp, olives  |
+|  Program will allow customer to choose pizza objects size, crust, sauce and cheese properties and submit form to create pizza object  |  small, thin, garlic-alfredo, vegan  |  myPizza = {size:small, crust:thin, sauce:garlic-alfredo, cheese:vegan
+}  |  Y  |
+|  Program will take in a selection of toppings from user  |  shrimp, olives  |  shrimp, olives  |  HERE  |
 |  Program will add toppings to new pizza object  |  shrimp, olives, sausage  |   pizza{size: large, crust: thick, sauce: marinara, cheese: mozzarella, toppings = ["shrimp", "olives", "sausage"]}   |
 |  Program will delete topping  |  user selects sausage topping and chooses delete icon  |  toppings: shrimp  |
 |  Program will give cost of pizza  |  user clicks confirm order  |  $20  |

@@ -8,13 +8,34 @@ body {
   font-style: italic;
 }
 
-#pizza-base {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-}
 
+/*  ORDER FORM  */
 .base {
   display: inline-block;
   width: 100px;
 }
+
+#pizza-base, #toppings {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  min-height: 100px;
+}
+
+#pizza-base {
+  justify-content: space-between;
+}
+
+#toppings {
+  justify-content: space-around;
+}
+
+.btn {
+  display: block;
+  margin: 30px auto;
+
+}
+
+
+
+/*  ORDER FORM  */

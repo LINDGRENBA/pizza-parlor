@@ -7,12 +7,13 @@ function Order() {
 }
 
 //business logic to make a pizza for the order
-function Pizza(size, crust, sauce, cheese, toppings) {
+function Pizza(size, crust, sauce, cheese, toppings, price) {
   this.size = size;
   this.crust = crust;
   this.sauce = sauce;
   this.cheese = cheese;
   this.toppings = []; //should this be an array, or a nested object?
+  this.price;
 }
 
 //business logic to add pizza to order
