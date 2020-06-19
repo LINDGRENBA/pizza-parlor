@@ -24,8 +24,8 @@ function Pizza(size, crust, sauce, cheese) {
   this.crust = crust;
   this.sauce = sauce;
   this.cheese = cheese;
-  // this.meatToppings = [];
-  // this.veggieToppings = [];
+  this.meatToppings;
+  this.veggieToppings;
   // this.price;
 }
 
@@ -33,39 +33,14 @@ Pizza.prototype.addVeggieToppings = function(veggies) {
   this.veggieToppings = veggies;
   return this.veggieToppings;
 }
-//should each topping have an id so user can select which toppings to delete?
 
-//business logic to take in veggie toppings and add to VeggieToppings array
-// Pizza.prototype.addVeggiesToPizza = function(vegetables) {
-//   vegetables.forEach(function(vegetable) {
-//     this.veggieToppings.push(vegetable);
-//   });
-// }
-
-
-
-//business logic to add veggies that user has selected into veggieToppings array in Pizza constructor function
-// let addVeggies = function(vegetables) {
-//   vegetables.forEach(function(veggie) {
-//     myPizza.addVeggiesToPizza(veggie);
-//     console.log(veggie);
-    // get the freaking vegetables into myPizza.veggieToppings array for goodness sake!!!
-//   });
-// }
-
-
-
-
+Pizza.prototype.addProteinToppings = function(protein) {
+  this.proteinToppings = protein;
+  return this.proteinToppings;
+}
 
 //USER INTERFACE LOGIC
 let customerOrder = new Order();
-
-// function addVeggiesToPizza(veggieArray) {
-//   veggieArray.forEach(function(veggie) {
-//     console.log(veggieArray);
-//     customerOrder.pizzas[0].veggieToppings.push(veggie);
-//   });
-// }
 
 $(document).ready(function(){
 
@@ -85,16 +60,15 @@ $(document).ready(function(){
       $("input:checkbox[name=veggies]:checked").each(function(i) {
         veggieArray.push($(this).val());
       });
-      let added = myPizza.addVeggieToppings(veggieArray);
-      console.log(added);
+      let addedVeggies = myPizza.addVeggieToppings(veggieArray);
     });
 
     $("button#addProtein").click(function() {
       let proteinArray = [];
       $("input:checkbox[name=protein]:checked").each(function(i) {
         proteinArray.push($(this).val());
-        console.log(proteinArray);
       });
+      let addedProtein = myPizza.addProteinToppings(proteinArray);
     });
 
   });
