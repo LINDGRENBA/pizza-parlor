@@ -24,9 +24,14 @@ function Pizza(size, crust, sauce, cheese) {
   this.crust = crust;
   this.sauce = sauce;
   this.cheese = cheese;
-  this.meatToppings = [];
-  this.veggieToppings = [];
-  this.price;
+  // this.meatToppings = [];
+  // this.veggieToppings = [];
+  // this.price;
+}
+
+Pizza.prototype.addVeggieToppings = function(veggies) {
+  this.veggieToppings = veggies;
+  return this.veggieToppings;
 }
 //should each topping have an id so user can select which toppings to delete?
 
@@ -55,12 +60,12 @@ function Pizza(size, crust, sauce, cheese) {
 //USER INTERFACE LOGIC
 let customerOrder = new Order();
 
-function addVeggiesToPizza(veggieArray) {
-  veggieArray.forEach(function(veggie) {
-    console.log(veggieArray);
-    customerOrder.pizzas[0].veggieToppings.push(veggie);
-  });
-}
+// function addVeggiesToPizza(veggieArray) {
+//   veggieArray.forEach(function(veggie) {
+//     console.log(veggieArray);
+//     customerOrder.pizzas[0].veggieToppings.push(veggie);
+//   });
+// }
 
 $(document).ready(function(){
 
@@ -74,22 +79,23 @@ $(document).ready(function(){
     //create new Pizza object with customer selected values and add to order
     let myPizza = new Pizza(pizzaSize, pizzaCrust, pizzaSauce, pizzaCheese);
     customerOrder.addPizzaToOrder(myPizza);
-  });
 
-  // take in user selection for toppings
-  $("button#addVeggies").click(function() {
-    let veggieArray = [];
-    $("input:checkbox[name=veggies]:checked").each(function(i) {
-      veggieArray.push($(this).val());
+    $("button#addVeggies").click(function() {
+      let veggieArray = [];
+      $("input:checkbox[name=veggies]:checked").each(function(i) {
+        veggieArray.push($(this).val());
+      });
+      let added = myPizza.addVeggieToppings(veggieArray);
+      console.log(added);
     });
-    addVeggiesToPizza(veggieArray);
-  });
 
-  $("button#addProtein").click(function() {
-    let proteinArray = [];
-    $("input:checkbox[name=protein]:checked").each(function(i) {
-      proteinArray.push($(this).val());
-      console.log(proteinArray);
+    $("button#addProtein").click(function() {
+      let proteinArray = [];
+      $("input:checkbox[name=protein]:checked").each(function(i) {
+        proteinArray.push($(this).val());
+        console.log(proteinArray);
+      });
     });
+
   });
 });
