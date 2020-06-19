@@ -30,11 +30,12 @@ Have you ever found yourself on a Zoom call, and all of your friends and family 
 
 | Behavior | Input | Output |
 | -------- | ----- | ------ |
+|  Program will create new Order object with array to hold each pizza customer orders and unique id for each pizza  |  n/a  |  Order {pizzas = [], pizzaId: 0}  |
+|  Program will give each added pizza a unique id  |  pizza1, pizza2  |  pizza1 id = 1, pizza2 id = 2  |
 |  Program will create a new pizza object with size, crust, sauce and cheese properties and empty toppings array  |  n/a  |  pizza{size: small, crust: thick, sauce: marinara, cheese: mozzarella, toppings = [ ]}  |
 |  Program will change/update size, crust, sauce and cheese properties based on user selection  |  user selects large, thin crust and vegan cheese  |  pizza{size: large, crust: thin, sauce: marinara, cheese: vegan, toppings = [ ]}  |
 |  Program will take in a selection of toppings from user  |  shrimp, olives  |  shrimp, olives  |
 |  Program will add toppings to new pizza object  |  shrimp, olives, sausage  |   pizza{size: large, crust: thick, sauce: marinara, cheese: mozzarella, toppings = ["shrimp", "olives", "sausage"]}   |
-|  Program will give each added topping a unique id  |  shrimp, sausage  |  shrimp id = 1, sausage id = 2  |
 |  Program will delete topping  |  user selects sausage topping and chooses delete icon  |  toppings: shrimp  |
 |  Program will give cost of pizza  |  user clicks confirm order  |  $20  |
 |  Program will increase pizza cost by $3 if size is large |  size:large  |  $20 + $3  |

@@ -14,7 +14,7 @@ function Pizza(size, crust, sauce, cheese, toppings) {
   this.crust = crust;
   this.sauce = sauce;
   this.cheese = cheese;
-  this.toppings = [];
+  this.toppings = []; //should this be an array, or a nested object?
 }
 
 
