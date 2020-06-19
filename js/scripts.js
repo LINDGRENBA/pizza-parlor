@@ -33,8 +33,6 @@ Order.prototype.assignPizzaId = function() {
 
 
 
-
-
 //USER INTERFACE LOGIC
 $(document).ready(function(){
   let customerOrder = new Order();
@@ -46,6 +44,19 @@ $(document).ready(function(){
     let pizzaCrust = $("#crust").val();
     let pizzaSauce = $("#sauce").val();
     let pizzaCheese = $("#cheese").val();
+
+    // take in user selection for toppings
+    $("input:checkbox[name=veggies]:checked").each(function() {
+      let selectedVeggies = $(this).val();
+      console.log(selectedVeggies);
+      // selectedVeggies.addVeggies();
+    });
+    $("input:checkbox[name=protein]:checked").each(function() {
+      let selectedProtein = $(this).val();
+      console.log(selectedProtein);
+      // selectedProtein.addProtein();
+    });
+
     
     //create new Pizza object with customer selected values and add to order
     let myPizza = new Pizza(pizzaSize, pizzaCrust, pizzaSauce, pizzaCheese);
