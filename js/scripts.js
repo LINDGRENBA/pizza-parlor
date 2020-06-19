@@ -6,18 +6,6 @@ function Order() {
   this.pizzaIdNumber = 0;
 }
 
-//business logic to make a pizza for the order
-function Pizza(size, crust, sauce, cheese) {
-  this.size = size;
-  this.crust = crust;
-  this.sauce = sauce;
-  this.cheese = cheese;
-  this.meatToppings = [];
-  this.veggieToppings = [];
-  this.price;
-}
-//should each topping have an id so user can select which toppings to delete?
-
 //business logic to add pizza to order
 Order.prototype.addPizzaToOrder = function(pizza) {
   pizza.pizzaId = this.assignPizzaId();
@@ -30,20 +18,51 @@ Order.prototype.assignPizzaId = function() {
   return this.pizzaIdNumber;
 }
 
-//business logic to add veggies that user has selected into veggieToppings array in Pizza constructor function
-Pizza.prototype.addVeggies = function(veggies) {
-  veggies.forEach(function(veggie) {
-    console.log(veggie);
-  });
+//business logic to make a pizza for the order
+function Pizza(size, crust, sauce, cheese) {
+  this.size = size;
+  this.crust = crust;
+  this.sauce = sauce;
+  this.cheese = cheese;
+  this.meatToppings = [];
+  this.veggieToppings = [];
+  this.price;
 }
+//should each topping have an id so user can select which toppings to delete?
+
+//business logic to take in veggie toppings and add to VeggieToppings array
+// Pizza.prototype.addVeggiesToPizza = function(vegetables) {
+//   vegetables.forEach(function(vegetable) {
+//     this.veggieToppings.push(vegetable);
+//   });
+// }
+
+
+
+//business logic to add veggies that user has selected into veggieToppings array in Pizza constructor function
+// let addVeggies = function(vegetables) {
+//   vegetables.forEach(function(veggie) {
+//     myPizza.addVeggiesToPizza(veggie);
+//     console.log(veggie);
+    // get the freaking vegetables into myPizza.veggieToppings array for goodness sake!!!
+//   });
+// }
 
 
 
 
 
 //USER INTERFACE LOGIC
+let customerOrder = new Order();
+
+function addVeggiesToPizza(veggieArray) {
+  veggieArray.forEach(function(veggie) {
+    console.log(veggieArray);
+    customerOrder.pizzas[0].veggieToppings.push(veggie);
+  });
+}
+
 $(document).ready(function(){
-  let customerOrder = new Order();
 
   $("#order-form").submit(function(event) {
     event.preventDefault();
@@ -58,15 +77,15 @@ $(document).ready(function(){
   });
 
   // take in user selection for toppings
-  $("#addVeggiesButton").click(function() {
+  $("button#addVeggies").click(function() {
     let veggieArray = [];
     $("input:checkbox[name=veggies]:checked").each(function(i) {
       veggieArray.push($(this).val());
-      console.log(veggieArray);
     });
+    addVeggiesToPizza(veggieArray);
   });
 
-  $("#addProteinButton").click(function() {
+  $("button#addProtein").click(function() {
     let proteinArray = [];
     $("input:checkbox[name=protein]:checked").each(function(i) {
       proteinArray.push($(this).val());
