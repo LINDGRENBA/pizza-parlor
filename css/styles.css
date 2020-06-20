@@ -31,13 +31,13 @@ body {
   justify-content: space-between;
 }
 
-.hr-between {
-  display: none;
+/*  TOPPINGS  */
+#addToppingsSection {
+  text-align: center;
 }
 
-#addToppingsSection {
+#veggie-options, #protein-options {
   display: none;
-  text-align: center;
 }
 
 /* BUTTONS */
@@ -60,6 +60,8 @@ body {
 /*  ORDER CONFIRMATION  */
 #calculate-order-btn {
   display: none;
+  text-align: center;
+  padding: 30px;
 }
 
 #order-summary {

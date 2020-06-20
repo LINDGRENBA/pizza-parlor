@@ -65,8 +65,8 @@ $(document).ready(function(){
     //create new Pizza object with customer selected values and add to order
     let myPizza = new Pizza(pizzaSize, pizzaCrust, pizzaSauce, pizzaCheese);
     customerOrder.addPizzaToOrder(myPizza);
-    $("#addToppingsSection").show();
-    $(".hr-between").show();
+    $("#order-form").hide();
+    $("#veggie-options").show();
 
     $("button#addVeggies").click(function() {
       let veggieArray = [];
@@ -74,6 +74,8 @@ $(document).ready(function(){
         veggieArray.push($(this).val());
       });
       let addedVeggies = myPizza.addVeggieToppings(veggieArray);
+      $("#veggie-options").hide();
+      $("#protein-options").show();
     });
 
     $("button#addProtein").click(function() {
@@ -82,11 +84,14 @@ $(document).ready(function(){
         proteinArray.push($(this).val());
       });
       let addedProtein = myPizza.addProteinToppings(proteinArray);
+      $("#protein-options").hide();
+      $("#calculate-order-btn").show();
     });
 
     $("#calculate-order-total").click(function() {
       let priceOfPizza = myPizza.calculateTotalCost();
       $("#price").text(priceOfPizza);
+      $("#calculate-order-btn").hide();
       $("#order-summary").show();
     });
 
