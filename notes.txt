@@ -2,6 +2,10 @@ Notes for things to consider along the way:
 In README.md setup, can I replace "n/a" with any helpful images?
 Should each topping have an id so user can select which toppings to delete?
 
+Increase pizza price by $3 if user selects large
+Increase pizza price by $3 if user selects vegan cheese
+
+
 Reach Goals:
 Style your site with CSS and images.
 

@@ -42,6 +42,9 @@ Have you ever found yourself on a Zoom call, and all of your friends and family 
 |  Program will increase pizza cost by $3 if size is large |  size:large  |  $15 + $3  |  N  |
 |  Program will delete topping  |  user selects sausage topping and chooses delete icon  |  toppings: shrimp  |  N  |
 |  Program will allow user to update or change pizza details before placing order  |  user selects large, thin crust and vegan cheese  |  pizza{size: large, crust: thin, sauce: marinara, cheese: vegan, toppings = [ ]}  |  N  |
+|  Program will allow user to add second pizza to order  |  User selects 'order another pizza' button  |  new Pizza object is created  |  N  |
+|  Program will allow user to edit their order before finalizing  |  user selects edit, unchecks olives  |  total price reduces by $1, olives deleted from order  |  N  |
+
 
 ## Known Bugs
 
@@ -51,6 +54,7 @@ Have you ever found yourself on a Zoom call, and all of your friends and family 
 |  scripts.js | Uncaught reference error myPizza is not defined | function to add veggie toppings to pizza unable to access myPizza |  Y  |  Moved .click functions for addVeggies and addProtein to inside of order form .submit function  |  
 | scripts.js | scripts.js:48 Uncaught TypeError: Cannot read property 'length' of undefined| order summary does not populate if user does not select at least one checkbox from both veggie and protein options| Y | Update styling of page to walk user through each step, add Previous and Next buttons so user can move through form without adding any toppings |
 | scripts.js | no message | After user calculates total, if user clicks calculate total again, displayed price increases by cost of selected toppings | Y | Once user has clicked button to calculate order, scripts.js will hide it so that user cannot click again |
+|  scripts.js  |  no message  |  If user clicks previous button and returns to step 1 to change initial options, myPizza values do not change  |  N  |    |
 
 ## Support and contact details
 
