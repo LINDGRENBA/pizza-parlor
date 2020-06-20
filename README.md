@@ -37,9 +37,9 @@ Have you ever found yourself on a Zoom call, and all of your friends and family 
 |  Program will allow customer to choose pizza objects size, crust, sauce and cheese properties and submit form to create pizza object  |  small, thin, garlic-alfredo, vegan  |  myPizza = {size:small, crust:thin, sauce:garlic-alfredo, cheese:vegan}  |  Y  |
 |  Program will take in a selection of toppings from user  |  shrimp, olives  |  shrimp, olives  |  Y  |
 |  Program will add toppings to new pizza object  |  shrimp, olives, sausage  |   pizza{size: large, crust: thick, sauce: marinara, cheese: mozzarella, toppings = ["shrimp", "olives", "sausage"]}   |  Y  |
-|  Program will give cost of pizza  |  user clicks confirm order  |  $20  |  Y  |
-|  Program will increase pizza cost by $3 if size is large |  size:large  |  $20 + $3  |  Y  |
-|  Program will increase pizza cost by $1 for each topping added |  size: large, toppings.length = 5  |  $23 + $5  |  Y  |
+|  Program will give cost of pizza  |  user clicks confirm order  |  $15  |  Y  |
+|  Program will increase pizza cost by $1 for each veggie topping added and $3 for each protein option added |  user selcts 5 veggie toppings and 1 protein  |  $15 + $5 + $3  |  Y  |
+|  Program will increase pizza cost by $3 if size is large |  size:large  |  $15 + $3  |  N  |
 |  Program will delete topping  |  user selects sausage topping and chooses delete icon  |  toppings: shrimp  |  N  |
 |  Program will allow user to update or change pizza details before placing order  |  user selects large, thin crust and vegan cheese  |  pizza{size: large, crust: thin, sauce: marinara, cheese: vegan, toppings = [ ]}  |  N  |
 
