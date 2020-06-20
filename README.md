@@ -49,6 +49,8 @@ Have you ever found yourself on a Zoom call, and all of your friends and family 
 | -------- | ----- | ------ | ------ | ------ |
 | scripts.js | Cannot read property 'push' of undefined | cannot pass veggieArray to .addVeggies function? |  Y  |  Created separate .click functions as siblings of .submit function in user interface, updated syntax of addVeggies and addProtein .click functions in user interface  |
 |  scripts.js | Uncaught reference error myPizza is not defined | function to add veggie toppings to pizza unable to access myPizza |  Y  |  Moved .click functions for addVeggies and addProtein to inside of order form .submit function  |  
+| scripts.js | scripts.js:48 Uncaught TypeError: Cannot read property 'length' of undefined| order summary does not populate if user does not select at least one checkbox from both veggie and protein options| N | ------ |
+| scripts.js | no message | After user calculates total, if user clicks calculate total again, displayed price increases by cost of selected toppings | N | ------ |
 
 ## Support and contact details
 

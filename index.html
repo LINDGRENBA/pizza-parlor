@@ -16,41 +16,46 @@
       <p class="tagline">It's always a good time for pizza!</p>
     </header>
     <form action="#" id="order-form">
-      <h3>Please select your bases.</h3>
       <div id="pizza-base">
         <div class="form-group">
+          <h4>Size:</h4>
           <select class="form-control base" id="size">
             <option value="small">Small</option>
             <option value="large">Large</option>
           </select>
         </div>
         <div class="form-group">
+          <h4>Crust type:</h4>
           <select class="form-control base" id="crust">
             <option value="thin">Thin</option>
             <option value="thick">Thick</option>
           </select>
         </div>
         <div class="form-group">
+          <h4>Sauce</h4>
           <select class="form-control base" id="sauce">
             <option value="marinara">Marinara</option>
             <option value="garlic-alfredo">Garlic Alfredo</option>
           </select>
         </div>
         <div class="form-group">
+          <h4>Cheese</h4>
           <select class="form-control base" id="cheese">
             <option value="mozzarella">Mozzarella</option>
             <option value="vegan">Vegan</option>
           </select>
         </div>
       </div>
+      <h3>Please select your bases above before beginning your order.</h3>
       <button id="begin-order-button" class="btn btn-success" type="submit">Begin Order</button>
+      <p class="direction">You must select Begin Order in order to continue</p>
     </form>
 
-    <hr>
+    <hr class="hr-between">
 
-    <div id="addToppingsSection">
+    <div id="addToppingsSection" class="row">
       <!--VEGGIE DIV-->
-      <div id="veggie-options">
+      <div id="veggie-options" class="col-sm-6 col-xs-12">
         <h4>Add any veggie toppings?</h4>
         <div class="form-check">
           <input class="form-check-input" type="checkbox" id="olive-topping" name="veggies" value="olives">
@@ -63,7 +68,7 @@
         <button id="addVeggies" class="btn btn-success">Add Veggies</button>
       </div>
         <!--MEAT DIV-->
-      <div id="meat-options">
+      <div id="meat-options" class="col-sm-6 col-xs-12">
         <h4>Add any protein toppings?</h4>
         <div class="form-check">
           <input class="form-check-input" type="checkbox" id="sausage-topping" name="protein" value="sausage">
@@ -81,20 +86,19 @@
   <hr>
 
   <button id="calculate-order-total" class="btn btn-info">Calculate Your Total</button>
-
   <div id="order-summary">
     <h2>Here is a summary of your order:</h2>
     <p>Payment will be collected at time of pick up or delivery</p>
     <ul id="pizza-details">
-      
+
     </ul>
     <h2>Your Total: $<span id="price"></span></h2>
   </div>
 </body>
 </html>
 
-        <!-- template to add more checkbox topping options
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" id=" " name="protein" value=" ">
-          <label class="form-check-label" for=" "> </label>
-        </div> -->
+<!-- template to add more checkbox topping options
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" id=" " name="protein" value=" ">
+  <label class="form-check-label" for=" "> </label>
+</div> -->

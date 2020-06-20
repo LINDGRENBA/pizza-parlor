@@ -12,7 +12,7 @@ Order.prototype.addPizzaToOrder = function(pizza) {
   this.pizzas.push(pizza);
 }
 
-//business logic to increade pizza id number by 1 and then return the new value when called
+//business logic to assign id to each pizza
 Order.prototype.assignPizzaId = function() {
   this.pizzaIdNumber += 1;
   return this.pizzaIdNumber;
@@ -42,6 +42,7 @@ Pizza.prototype.addProteinToppings = function(protein) {
 Pizza.prototype.calculateTotalCost = function() {
   let costForAddedVeggies = 0;
   let costForAddedProtein = 0;
+
   for(let i = 0; i < this.veggieToppings.length; i++) {
     costForAddedVeggies += 1;
   }
@@ -65,6 +66,7 @@ $(document).ready(function(){
     let myPizza = new Pizza(pizzaSize, pizzaCrust, pizzaSauce, pizzaCheese);
     customerOrder.addPizzaToOrder(myPizza);
     $("#addToppingsSection").show();
+    $(".hr-between").show();
 
     $("button#addVeggies").click(function() {
       let veggieArray = [];

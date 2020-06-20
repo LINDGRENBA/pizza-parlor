@@ -8,13 +8,17 @@ body {
   font-style: italic;
 }
 
+.direction, h3 {
+  text-align: center;
+}
+
 /*  ORDER FORM  */
 .base {
   display: inline-block;
-  width: 100px;
+  width: 150px;
 }
 
-#pizza-base, #addToppingsSection {
+#pizza-base {
   display: flex;
   flex-flow: row wrap;
   align-items: center;
@@ -27,8 +31,13 @@ body {
   justify-content: space-between;
 }
 
+.hr-between {
+  display: none;
+}
+
 #addToppingsSection {
-  justify-content: space-around;
+  display: none;
+  text-align: center;
 }
 
 /* BUTTONS */
