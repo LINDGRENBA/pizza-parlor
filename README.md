@@ -40,6 +40,8 @@ Have you ever found yourself on a Zoom call, and all of your friends and family 
 |  Program will give cost of pizza  |  user clicks confirm order  |  $15  |  Y  |
 |  Program will increase pizza cost by $1 for each veggie topping added and $3 for each protein option added |  user selcts 5 veggie toppings and 1 protein  |  $15 + $5 + $3  |  Y  |
 |  Program will increase pizza cost by $3 if size is large |  size:large  |  $15 + $3  |  N  |
+|  Program will increase pizza cost by $3 if cheese is vegan |  cheese:vegan  |  $15 + $3  |  N  |
+|  Program will assign a unique id to each topping before adding it to object  |  onion, olives  |  onion id = 1, olives id = 2  |    |
 |  Program will delete topping  |  user selects sausage topping and chooses delete icon  |  toppings: shrimp  |  N  |
 |  Program will allow user to update or change pizza details before placing order  |  user selects large, thin crust and vegan cheese  |  pizza{size: large, crust: thin, sauce: marinara, cheese: vegan, toppings = [ ]}  |  N  |
 |  Program will allow user to add second pizza to order  |  User selects 'order another pizza' button  |  new Pizza object is created  |  N  |
