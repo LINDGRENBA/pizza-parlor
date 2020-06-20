@@ -2,8 +2,7 @@ Notes for things to consider along the way:
 In README.md setup, can I replace "n/a" with any helpful images?
 Should each topping have an id so user can select which toppings to delete?
 
-Increase pizza price by $3 if user selects large
-Increase pizza price by $3 if user selects vegan cheese
+need to figure out how to fix spacing of Known Bugs table in README.md. When viewed on github, section for bug is large while section for how fixed is tiny...
 
 
 Reach Goals:
