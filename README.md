@@ -56,7 +56,7 @@ Have you ever found yourself on a Zoom call, and all of your friends and family 
 |  scripts.js | Uncaught reference error myPizza is not defined | function to add veggie toppings to pizza unable to access myPizza |  Y  |  Moved .click functions for addVeggies and addProtein to inside of order form .submit function  |  
 | scripts.js | scripts.js:48 Uncaught TypeError: Cannot read property 'length' of undefined| order summary does not populate if user does not select at least one checkbox from both veggie and protein options| Y | Update styling of page to walk user through each step, add Previous and Next buttons so user can move through form without adding any toppings |
 | scripts.js | no message | After user calculates total, if user clicks calculate total again, displayed price increases by cost of selected toppings | Y | Once user has clicked button to calculate order, scripts.js will hide it so that user cannot click again |
-|  scripts.js  |  no message  |  If user clicks previous button and returns to step 1 to change initial options, myPizza values do not change  |  N  |    |
+|  scripts.js  |  no message  |  If user clicks previous button and returns to step 1 to change initial options, program creates a second myPizza object (id = 2) with the new values instead of replacing the initial values (probably because 'begin order' is the button that creates a new object. Consider changing the button - maybe "start new order" and adding a button - maybe "next" so that you have two different buttons for two seperate actions)  |  N  |    |
 
 ## Support and contact details
 
