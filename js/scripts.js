@@ -26,7 +26,7 @@ function Pizza(size, crust, sauce, cheese) {
   this.cheese = cheese;
   this.proteinToppings;
   this.veggieToppings;
-  this.price = 20;
+  this.price = 15;
 }
 
 Pizza.prototype.addVeggieToppings = function(veggies) {
@@ -52,6 +52,10 @@ Pizza.prototype.calculateTotalCost = function() {
   return this.price += costForAddedProtein + costForAddedVeggies;
 }
 
+// Pizza.prototype.resetToppingsValue = function() {
+//   this.price = 15;
+// }
+
 //USER INTERFACE LOGIC
 $(document).ready(function(){
   let customerOrder = new Order();
@@ -68,6 +72,7 @@ $(document).ready(function(){
     $("#order-form").hide();
     $("#veggie-options").show();
 
+    //adding toppings
     $("button#addVeggies").click(function() {
       let veggieArray = [];
       $("input:checkbox[name=veggies]:checked").each(function(i) {
@@ -98,6 +103,7 @@ $(document).ready(function(){
       $("#veggie-options").show();
     })
 
+    //completing the order
     $("#calculate-order-total").click(function() {
       let priceOfPizza = myPizza.calculateTotalCost();
       $("#price").text(priceOfPizza);
