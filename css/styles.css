@@ -36,9 +36,9 @@ body {
   text-align: center;
 }
 
-#veggie-options, #protein-options {
+/* #veggie-options, #protein-options {
   display: none;
-}
+} */
 
 /* BUTTONS */
 #begin-order-button {
@@ -46,20 +46,17 @@ body {
   margin: 30px auto;
 }
 
-.flex-button {
-  display: flex;
-  align-items: center;
+.veg, .protein {
+  margin: 30px auto;
 }
 
 #calculate-order-total {
   margin: 50px auto;
-  display: block;
-  
 }
 
 /*  ORDER CONFIRMATION  */
-#calculate-order-btn {
-  display: none;
+#calculate-order-div {
+  /* display: none; */
   text-align: center;
   padding: 30px;
 }

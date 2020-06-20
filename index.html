@@ -65,7 +65,8 @@
           <input class="form-check-input" type="checkbox" id="onion-topping" name="veggies" value="onion">
           <label class="form-check-label" for="onion-topping">Onion</label>
         </div>
-        <button id="addVeggies" class="btn btn-success">Add Veggies</button>
+        <button id="go-back-to-base" class="btn btn-danger veg">Previous</button>
+        <button id="addVeggies" class="btn btn-success veg">Next</button>
       </div>
         <!--MEAT DIV-->
       <div id="protein-options" class="col-sm-6 col-xs-12">
@@ -79,14 +80,16 @@
           <input class="form-check-input" type="checkbox" id="shrimp-topping" name="protein" value="shrimp">
           <label class="form-check-label" for="shrimp-topping">Shrimp</label>
         </div>
-        <button id="addProtein" class="btn btn-success">Add Protein</button>
+        <button id="go-back-to-veggies" class="btn btn-danger protein">Previous</button>
+        <button id="addProtein" class="btn btn-success protein">Next</button>
       </div>
     </div>
   </div>
 
-  <div id="calculate-order-btn">
+  <div id="calculate-order-div">
     <h4>Step 4: Calculate your total to complete your pizza order</h4>
     <p>After calculating your total, you will be receive confirmation of your order.</p>
+    <button id="go-back-to-protein" class="btn btn-danger">Previous</button>
     <button id="calculate-order-total" class="btn btn-info">Calculate Total</button>
   </div>
 
