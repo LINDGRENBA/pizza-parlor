@@ -16,6 +16,7 @@
       <p class="tagline">It's always a good time for pizza!</p>
     </header>
     <form action="#" id="order-form">
+      <h4>Step 1: Selected your base</h4>
       <div id="pizza-base">
         <div class="form-group">
           <h4>Size:</h4>
@@ -48,7 +49,6 @@
       </div>
       <h3>Please select your bases above before beginning your order.</h3>
       <button id="begin-order-button" class="btn btn-success" type="submit">Begin Order</button>
-      <p class="direction">You must select Begin Order in order to continue</p>
     </form>
 
     <hr class="hr-between">
@@ -84,8 +84,10 @@
   </div>
 
   <hr>
+  <div id="calculate-order-btn">
+    <button id="calculate-order-total" class="btn btn-info">Calculate Your Total</button>
+  </div>
 
-  <button id="calculate-order-total" class="btn btn-info">Calculate Your Total</button>
   <div id="order-summary">
     <h2>Here is a summary of your order:</h2>
     <p>Payment will be collected at time of pick up or delivery</p>

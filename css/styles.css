@@ -46,6 +46,11 @@ body {
   margin: 30px auto;
 }
 
+.flex-button {
+  display: flex;
+  align-items: center;
+}
+
 #calculate-order-total {
   margin: 50px auto;
   display: block;
@@ -53,6 +58,10 @@ body {
 }
 
 /*  ORDER CONFIRMATION  */
+#calculate-order-btn {
+  display: none;
+}
+
 #order-summary {
   display: none;
   padding: 30px;
