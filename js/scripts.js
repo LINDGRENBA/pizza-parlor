@@ -78,6 +78,11 @@ $(document).ready(function(){
       $("#protein-options").show();
     });
 
+    $("#go-back-to-base").click(function() {
+      $("#veggie-options").hide();
+      $("#order-form").show();
+    });
+
     $("button#addProtein").click(function() {
       let proteinArray = [];
       $("input:checkbox[name=protein]:checked").each(function(i) {
@@ -85,14 +90,24 @@ $(document).ready(function(){
       });
       let addedProtein = myPizza.addProteinToppings(proteinArray);
       $("#protein-options").hide();
-      $("#calculate-order-btn").show();
+      $("#calculate-order-div").show();
     });
+
+    $("#go-back-to-veggies").click(function() {
+      $("#protein-options").hide();
+      $("#veggie-options").show();
+    })
 
     $("#calculate-order-total").click(function() {
       let priceOfPizza = myPizza.calculateTotalCost();
       $("#price").text(priceOfPizza);
-      $("#calculate-order-btn").hide();
+      $("#calculate-order-div").hide();
       $("#order-summary").show();
+    });
+
+    $("#go-back-to-protein").click(function() {
+      $("#calculate-order-div").hide();
+      $("#protein-options").show();
     });
 
   });
