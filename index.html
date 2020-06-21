@@ -17,12 +17,13 @@
     </header>
     <form action="#" id="order-form">
       <h4>Step 1: Selected your base.</h4>
-      <p>Pizzas start at $15.00 for small, $18.00 for large. Add $3.00 for vegan cheese</p>
+      <p>Pizzas start at $15.00 for small. Add $3.00 for large size pizza, vegan cheese or stuffed crust.</p>
       <div id="pizza-base">
         <div class="form-group">
           <h4>Size:</h4>
           <select class="form-control base" id="size">
             <option value="small">Small</option>
+            <option value="medium">Medium</option>
             <option value="large">Large</option>
           </select>
         </div>
@@ -31,13 +32,17 @@
           <select class="form-control base" id="crust">
             <option value="thin">Thin</option>
             <option value="thick">Thick</option>
+            <option value="stuffed">Stuffed</option>
+            <option value="deep-dish">Deep Dish</option>
           </select>
         </div>
         <div class="form-group">
           <h4>Sauce</h4>
           <select class="form-control base" id="sauce">
+            <option value="pesto">Pesto</option>
             <option value="marinara">Marinara</option>
             <option value="garlic-alfredo">Garlic Alfredo</option>
+            <option value="olive-oil">Olive Oil</option>
           </select>
         </div>
         <div class="form-group">
@@ -45,6 +50,7 @@
           <select class="form-control base" id="cheese">
             <option value="mozzarella">Mozzarella</option>
             <option value="vegan">Vegan</option>
+            <option value="no-cheese">No Cheese</option>
           </select>
         </div>
       </div>
@@ -65,6 +71,17 @@
           <input class="form-check-input" type="checkbox" id="onion-topping" name="veggies" value="onion">
           <label class="form-check-label" for="onion-topping">Onion</label>
         </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="artichoke-heart-topping" name="veggies" value="artichoke-hearts">
+          <label class="form-check-label" for="artichoke-heart-topping">Artichoke Hearts</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="jalapeno-topping" name="veggies" value="jalapenos">
+          <label class="form-check-label" for="jalapeno-topping">Jalapenos</label>
+        </div><div class="form-check">
+          <input class="form-check-input" type="checkbox" id="green-pepper-topping" name="veggies" value="green-pepper">
+          <label class="form-check-label" for="green-pepper-topping">Green Pepper</label>
+        </div>
         <button id="go-back-to-base" class="btn btn-danger veg">Previous</button>
         <button id="addVeggies" class="btn btn-success veg">Next</button>
       </div>
@@ -79,6 +96,18 @@
         <div class="form-check">
           <input class="form-check-input" type="checkbox" id="shrimp-topping" name="protein" value="shrimp">
           <label class="form-check-label" for="shrimp-topping">Shrimp</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="canadian-bacon-topping" name="protein" value="canadian-bacon">
+          <label class="form-check-label" for="canadian-bacon-topping">Canadian Bacon</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="pepperoni-topping" name="protein" value="pepperoni">
+          <label class="form-check-label" for="pepperoni-topping">Pepperoni</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="soy-curl-topping" name="protein" value="soy-curls">
+          <label class="form-check-label" for="soy-curl-topping">Soy Curls</label>
         </div>
         <button id="go-back-to-veggies" class="btn btn-danger protein">Previous</button>
         <button id="addProtein" class="btn btn-success protein">Next</button>
@@ -106,6 +135,6 @@
 
 <!-- template to add more checkbox topping options
 <div class="form-check">
-  <input class="form-check-input" type="checkbox" id=" " name="protein" value=" ">
+  <input class="form-check-input" type="checkbox" id=" " name="veggies" value=" ">
   <label class="form-check-label" for=" "> </label>
 </div> -->

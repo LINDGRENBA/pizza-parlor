@@ -27,8 +27,13 @@ function Pizza(size, crust, sauce, cheese) {
   this.proteinToppings;
   this.veggieToppings;
   this.price = 15;
-  // this.price;
 }
+
+// instead of assigning an id to each topping, maybe it would be better to search through a loop to match their value in order to delete them...
+// Pizza.prototype.assignToppingId = function() {
+//   this.toppingIdNumber += 1;
+//   return this.toppingIdNumber;
+// }
 
 Pizza.prototype.addVeggieToppings = function(veggies) {
   this.veggieToppings = veggies;
@@ -44,9 +49,11 @@ Pizza.prototype.calculateTotalCost = function() {
   let costForAddedVeggies = 0;
   let costForAddedProtein = 0;
 
-  if (this.size === "large" && this.cheese === "vegan") {
+  if (this.size === "large" && this.cheese === "vegan" && this.crust === "stuffed") {
+    this.price += 9;
+  } else if ((this.size === "large" && this.cheese === "vegan") || (this.cheese === "vegan" && this.crust === "stuffed") || (this.crust === "stuffed" && this.size === "large")) {
     this.price += 6;
-  } else if (this.size === "large" || this.cheese === "vegan") {
+  } else if (this.size === "large" || this.cheese === "vegan" || this.crust === "stuffed") {
     this.price += 3;
   }
 
