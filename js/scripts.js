@@ -37,12 +37,10 @@ function Pizza(size, crust, sauce, cheese) {
 
 Pizza.prototype.addVeggieToppings = function(veggies) {
   this.veggieToppings = veggies;
-  return this.veggieToppings;
 }
 
 Pizza.prototype.addProteinToppings = function(protein) {
   this.proteinToppings = protein;
-  return this.proteinToppings;
 }
 
 Pizza.prototype.calculateTotalCost = function() {
