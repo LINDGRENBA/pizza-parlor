@@ -119,8 +119,8 @@ $(document).ready(function(){
 
     //completing the order
     $("#calculate-order-total").click(function() {
-      let priceOfPizza = myPizza.calculateTotalCost();
-      $("#price").text(priceOfPizza);
+      myPizza.calculateTotalCost();
+      $("#price").text(myPizza.price);
       $("#calculate-order-div").hide();
       $("#order-summary").show();
     });
