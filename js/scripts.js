@@ -49,17 +49,15 @@ Pizza.prototype.calculateTotalCost = function() {
   let costForAddedVeggies = 0;
   let costForAddedProtein = 0;
 
-if (this.size === "large") {
-  this.price += 3;
-}
-
-if (this.cheese === "vegan") {
-  this.price += 3;
-}
-
-if (this.crust === "stuffed") {
-  this.price += 3;
-}
+  if (this.size === "large") {
+    this.price += 3;
+  }
+  if (this.cheese === "vegan") {
+    this.price += 3;
+  }
+  if (this.crust === "stuffed") {
+    this.price += 3;
+  }
 
   for(let i = 0; i < this.veggieToppings.length; i++) {
     costForAddedVeggies += 1;
@@ -67,7 +65,7 @@ if (this.crust === "stuffed") {
   for(let i = 0; i < this.proteinToppings.length; i++) {
     costForAddedProtein += 3;
   }
-  return this.price += costForAddedProtein + costForAddedVeggies;
+  this.price += costForAddedProtein + costForAddedVeggies;
 }
 
 // Pizza.prototype.resetToppingsValue = function() {
@@ -96,7 +94,7 @@ $(document).ready(function(){
       $("input:checkbox[name=veggies]:checked").each(function(i) {
         veggieArray.push($(this).val());
       });
-      let addedVeggies = myPizza.addVeggieToppings(veggieArray);
+      myPizza.addVeggieToppings(veggieArray);
       $("#veggie-options").hide();
       $("#protein-options").show();
     });
@@ -111,7 +109,7 @@ $(document).ready(function(){
       $("input:checkbox[name=protein]:checked").each(function(i) {
         proteinArray.push($(this).val());
       });
-      let addedProtein = myPizza.addProteinToppings(proteinArray);
+      myPizza.addProteinToppings(proteinArray);
       $("#protein-options").hide();
       $("#calculate-order-div").show();
     });
