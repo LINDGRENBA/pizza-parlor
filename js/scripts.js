@@ -49,13 +49,17 @@ Pizza.prototype.calculateTotalCost = function() {
   let costForAddedVeggies = 0;
   let costForAddedProtein = 0;
 
-  if (this.size === "large" && this.cheese === "vegan" && this.crust === "stuffed") {
-    this.price += 9;
-  } else if ((this.size === "large" && this.cheese === "vegan") || (this.cheese === "vegan" && this.crust === "stuffed") || (this.crust === "stuffed" && this.size === "large")) {
-    this.price += 6;
-  } else if (this.size === "large" || this.cheese === "vegan" || this.crust === "stuffed") {
-    this.price += 3;
-  }
+if (this.size === "large") {
+  this.price += 3;
+}
+
+if (this.cheese === "vegan") {
+  this.price += 3;
+}
+
+if (this.crust === "stuffed") {
+  this.price += 3;
+}
 
   for(let i = 0; i < this.veggieToppings.length; i++) {
     costForAddedVeggies += 1;
