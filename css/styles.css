@@ -35,10 +35,10 @@ body {
 #addToppingsSection {
   text-align: center;
 }
-
+/* 
 #veggie-options, #protein-options {
   display: none;
-}
+} */
 
 /* BUTTONS */
 #begin-order-button {
@@ -55,11 +55,11 @@ body {
 }
 
 /*  ORDER CONFIRMATION  */
-#calculate-order-div {
+/* #calculate-order-div {
   display: none;
   text-align: center;
   padding: 30px;
-}
+} */
 
 #order-summary {
   display: none;

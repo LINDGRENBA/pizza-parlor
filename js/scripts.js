@@ -4,12 +4,14 @@
 function Order() {
   this.pizzas = [];
   this.pizzaIdNumber = 0;
+  this.totalPrice = 0;
 }
 
 //business logic to add pizza to order
 Order.prototype.addPizzaToOrder = function(pizza) {
   pizza.pizzaId = this.assignPizzaId();
   this.pizzas.push(pizza);
+  console.log(this.pizzas); //DELETE CONSOLE.LOG
 }
 
 //business logic to assign id to each pizza
@@ -18,8 +20,25 @@ Order.prototype.assignPizzaId = function() {
   return this.pizzaIdNumber;
 }
 
+Order.prototype.calculateTotalCost = function() {
+  for(let i = 0; i < this.pizzas.length; i++) {
+    this.totalPrice += this.pizzas[i].price;
+  }
+}
+
 //business logic to make a pizza for the order
-function Pizza(size, crust, sauce, cheese) {
+function Pizza(size, crust, sauce, cheese) { 
+  this.size = size;
+  this.crust = crust;
+  this.sauce = sauce;
+  this.cheese = cheese;
+  this.proteinToppings;
+  this.veggieToppings;
+  this.price -= this.totalPrice - this.price;
+}
+
+
+Pizza.prototype.resetValues = function(){ //NEW METHOD
   this.size = size;
   this.crust = crust;
   this.sauce = sauce;
@@ -43,7 +62,7 @@ Pizza.prototype.addProteinToppings = function(protein) {
   this.proteinToppings = protein;
 }
 
-Pizza.prototype.calculateTotalCost = function() {
+Pizza.prototype.calculatePizzaCost = function() { //CHANGE METHOD NAME
   let costForAddedVeggies = 0;
   let costForAddedProtein = 0;
 
@@ -65,10 +84,6 @@ Pizza.prototype.calculateTotalCost = function() {
   }
   this.price += costForAddedProtein + costForAddedVeggies;
 }
-
-// Pizza.prototype.resetToppingsValue = function() {
-//   this.price = 15;
-// }
 
 //USER INTERFACE LOGIC
 $(document).ready(function(){
@@ -108,21 +123,32 @@ $(document).ready(function(){
         proteinArray.push($(this).val());
       });
       myPizza.addProteinToppings(proteinArray);
+      //CALCULATE PIZZA COST HERE AND SHOW IN CALCULATE ORDER DIV
+      myPizza.calculatePizzaCost(); //CHANGED METHOD NAME
+      $("#current-total").text(myPizza.price);
       $("#protein-options").hide();
       $("#calculate-order-div").show();
+      console.log(myPizza.price); // DELETE CONSOLE LOG
     });
 
     $("#go-back-to-veggies").click(function() {
       $("#protein-options").hide();
       $("#veggie-options").show();
-    })
+    });
 
     //completing the order
     $("#calculate-order-total").click(function() {
-      myPizza.calculateTotalCost();
-      $("#price").text(myPizza.price);
+      customerOrder.calculateTotalCost();
+      //CALCULATE TOTAL COST HERE
+      $("#price").text(customerOrder.totalPrice);
       $("#calculate-order-div").hide();
       $("#order-summary").show();
+    });
+
+    $("#order-another").click(function() {
+      $("#order-form").show();
+      $("#calculate-order-div").hide();
+      myPizza.resetValues();
     });
 
     $("#go-back-to-protein").click(function() {
