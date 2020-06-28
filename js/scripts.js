@@ -69,6 +69,8 @@ if (this.crust === "stuffed") {
   }
   this.price += costForAddedProtein + costForAddedVeggies;
 }
+//consider changing above method to calculatePizzaCost
+//add different method to calculate total cost if multiple pizzas
 
 
 //USER INTERFACE LOGIC
