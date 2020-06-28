@@ -95,7 +95,7 @@ $(document).ready(function(){
       $("input:checkbox[name=veggies]:checked").each(function(i) {
         veggieArray.push($(this).val());
       });
-      let addedVeggies = myPizza.addVeggieToppings(veggieArray);
+      myPizza.addVeggieToppings(veggieArray);
       $("#veggie-options").hide();
       $("#protein-options").show();
     });
@@ -110,7 +110,7 @@ $(document).ready(function(){
       $("input:checkbox[name=protein]:checked").each(function(i) {
         proteinArray.push($(this).val());
       });
-      let addedProtein = myPizza.addProteinToppings(proteinArray);
+      myPizza.addProteinToppings(proteinArray);
       $("#protein-options").hide();
       $("#calculate-order-div").show();
     });
