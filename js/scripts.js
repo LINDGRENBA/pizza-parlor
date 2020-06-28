@@ -34,7 +34,7 @@ function Pizza(size, crust, sauce, cheese) {
   this.cheese = cheese;
   this.proteinToppings;
   this.veggieToppings;
-  this.price -= this.totalPrice - this.price;
+  this.price += this.totalPrice + this.price;
 }
 
 
