@@ -56,18 +56,12 @@ Pizza.prototype.resetValues = function(){ //NEW METHOD
 
 Pizza.prototype.addVeggieToppings = function(veggies) {
   this.veggieToppings = veggies;
-<<<<<<< HEAD
-=======
   this.veggieToppings;
->>>>>>> secondSubmit
 }
 
 Pizza.prototype.addProteinToppings = function(protein) {
   this.proteinToppings = protein;
-<<<<<<< HEAD
-=======
   this.proteinToppings;
->>>>>>> secondSubmit
 }
 
 Pizza.prototype.calculatePizzaCost = function() { //CHANGE METHOD NAME
