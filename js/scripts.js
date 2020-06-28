@@ -66,6 +66,7 @@ Pizza.prototype.calculatePizzaCost = function() { //CHANGE METHOD NAME
   let costForAddedVeggies = 0;
   let costForAddedProtein = 0;
 
+<<<<<<< HEAD
   if (this.size === "large") {
     this.price += 3;
   }
@@ -75,6 +76,19 @@ Pizza.prototype.calculatePizzaCost = function() { //CHANGE METHOD NAME
   if (this.crust === "stuffed") {
     this.price += 3;
   }
+=======
+if (this.size === "large") {
+  this.price += 3;
+}
+
+if (this.cheese === "vegan") {
+  this.price += 3;
+}
+
+if (this.crust === "stuffed") {
+  this.price += 3;
+}
+>>>>>>> secondSubmit
 
   for(let i = 0; i < this.veggieToppings.length; i++) {
     costForAddedVeggies += 1;
