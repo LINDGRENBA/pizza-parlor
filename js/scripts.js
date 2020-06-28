@@ -37,12 +37,12 @@ function Pizza(size, crust, sauce, cheese) {
 
 Pizza.prototype.addVeggieToppings = function(veggies) {
   this.veggieToppings = veggies;
-  return this.veggieToppings;
+  this.veggieToppings;
 }
 
 Pizza.prototype.addProteinToppings = function(protein) {
   this.proteinToppings = protein;
-  return this.proteinToppings;
+  this.proteinToppings;
 }
 
 Pizza.prototype.calculateTotalCost = function() {
@@ -67,7 +67,7 @@ if (this.crust === "stuffed") {
   for(let i = 0; i < this.proteinToppings.length; i++) {
     costForAddedProtein += 3;
   }
-  return this.price += costForAddedProtein + costForAddedVeggies;
+  this.price += costForAddedProtein + costForAddedVeggies;
 }
 
 // Pizza.prototype.resetToppingsValue = function() {
